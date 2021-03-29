@@ -16,10 +16,8 @@ extension JSONDecoder {
         DispatchQueue.global().async {
             do {
                 let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .iso8601
                 
-                let downloadedData = try decoder.decode(type, from: data)
+                let downloadedData = try self.decode(type, from: data)
                 
                 DispatchQueue.main.async {
                     completion(downloadedData)
