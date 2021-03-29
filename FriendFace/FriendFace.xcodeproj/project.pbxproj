@@ -17,6 +17,7 @@
 		04A56FF32612763200F2DE97 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A56FF22612763200F2DE97 /* Connection.swift */; };
 		04A56FFA2612770E00F2DE97 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A56FF92612770E00F2DE97 /* TableViewController.swift */; };
 		04A56FFE26127FA800F2DE97 /* Array+FriendMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A56FFD26127FA800F2DE97 /* Array+FriendMatching.swift */; };
+		04A570012612823400F2DE97 /* JSONDecoder+Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A570002612823400F2DE97 /* JSONDecoder+Remote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		04A56FF22612763200F2DE97 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		04A56FF92612770E00F2DE97 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		04A56FFD26127FA800F2DE97 /* Array+FriendMatching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+FriendMatching.swift"; sourceTree = "<group>"; };
+		04A570002612823400F2DE97 /* JSONDecoder+Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Remote.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				04A56FFD26127FA800F2DE97 /* Array+FriendMatching.swift */,
+				04A570002612823400F2DE97 /* JSONDecoder+Remote.swift */,
 			);
 			path = "Helpers and Extensions";
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A570012612823400F2DE97 /* JSONDecoder+Remote.swift in Sources */,
 				04A56FCF261272D200F2DE97 /* AppDelegate.swift in Sources */,
 				04A56FF32612763200F2DE97 /* Connection.swift in Sources */,
 				04A56FFE26127FA800F2DE97 /* Array+FriendMatching.swift in Sources */,

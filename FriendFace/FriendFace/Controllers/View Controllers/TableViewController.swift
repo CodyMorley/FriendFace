@@ -16,31 +16,8 @@ class TableViewController: UITableViewController, UISearchResultsUpdating {
     // MARK: - Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let search = UISearchController(searchResultsController: nil)
-        search.obscuresBackgroundDuringPresentation = false
-        search.searchBar.placeholder = "Find A Friend"
-        search.searchResultsUpdater = self
-        navigationItem.searchController = search
-        
-        DispatchQueue.global().async {
-            do {
-                let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json")!
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .iso8601
-                
-                let downloadedFriends = try decoder.decode([Friend].self, from: data)
-                
-                DispatchQueue.main.async {
-                    self.friends = downloadedFriends
-                    self.filteredFriends = downloadedFriends
-                    self.tableView.reloadData()
-                }
-            } catch {
-                NSLog("\(error.localizedDescription)")
-            }
-        }
+        searchSetup()
+        fetchFriends()
     }
 
     
@@ -55,7 +32,7 @@ class TableViewController: UITableViewController, UISearchResultsUpdating {
         let friend = filteredFriends[indexPath.row]
         
         cell.textLabel?.text = friend.name
-        cell.detailTextLabel?.text = friend.friends.map { $0.name }.joined(separator: ",")
+        cell.detailTextLabel?.text = friend.friendList
         return cell
     }
     
@@ -64,5 +41,27 @@ class TableViewController: UITableViewController, UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         filteredFriends = friends.matching(searchController.searchBar.text)
         tableView.reloadData()
+    }
+    
+    
+    // MARK: - Private Methods
+    private func fetchFriends() {
+        let url = "https://www.hackingwithswift.com/samples/friendface.json"
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        
+        decoder.decode([Friend].self, fromURL: url, completion: { friends in
+            self.friends = friends
+            self.filteredFriends = friends
+            self.tableView.reloadData()
+        })
+    }
+    
+    private func searchSetup() {
+        let search = UISearchController(searchResultsController: nil)
+        search.obscuresBackgroundDuringPresentation = false
+        search.searchBar.placeholder = "Find A Friend"
+        search.searchResultsUpdater = self
+        navigationItem.searchController = search
     }
 }
