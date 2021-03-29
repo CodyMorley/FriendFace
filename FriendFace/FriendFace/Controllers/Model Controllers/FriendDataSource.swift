@@ -7,10 +7,17 @@
 
 import UIKit
 
-class FriendDataSource: NSObject, UITableViewDataSource, UISearchResultsUpdating {
+class FriendDataSource: NSObject, UITableViewDataSource {
+    // MARK: - Properties
     var friends = [Friend]()
     var filteredFriends = [Friend]()
     var dataChanged: (() -> Void)?
+    var filterText: String? {
+        didSet {
+            filteredFriends = friends.matching(filterText)
+            dataChanged?()
+        }
+    }
     
     // MARK: - Table view data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,12 +35,7 @@ class FriendDataSource: NSObject, UITableViewDataSource, UISearchResultsUpdating
     }
     
     
-    // MARK: - Search Results Updater
-    func updateSearchResults(for searchController: UISearchController) {
-        filteredFriends = friends.matching(searchController.searchBar.text)
-        dataChanged?()
-    }
-    
+    // MARK: - Methods
     func fetchFriends() {
         let url = "https://www.hackingwithswift.com/samples/friendface.json"
         let decoder = JSONDecoder()

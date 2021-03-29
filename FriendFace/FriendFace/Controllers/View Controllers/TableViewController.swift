@@ -7,9 +7,10 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController, UISearchResultsUpdating {
     // MARK: - Properties -
     let dataSource = FriendDataSource()
+    
     
     // MARK: - Life Cycles
     override func viewDidLoad() {
@@ -24,12 +25,19 @@ class TableViewController: UITableViewController {
         searchSetup()
     }
     
+    
+    // MARK: - Search Results Updater
+    func updateSearchResults(for searchController: UISearchController) {
+        dataSource.filterText = searchController.searchBar.text
+    }
+    
+    
     // MARK: - Private Methods
     private func searchSetup() {
         let search = UISearchController(searchResultsController: nil)
         search.obscuresBackgroundDuringPresentation = false
         search.searchBar.placeholder = "Find A Friend"
-        search.searchResultsUpdater = dataSource
+        search.searchResultsUpdater = self
         navigationItem.searchController = search
     }
 }
