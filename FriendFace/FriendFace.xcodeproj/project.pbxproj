@@ -18,6 +18,7 @@
 		04A56FFA2612770E00F2DE97 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A56FF92612770E00F2DE97 /* TableViewController.swift */; };
 		04A56FFE26127FA800F2DE97 /* Array+FriendMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A56FFD26127FA800F2DE97 /* Array+FriendMatching.swift */; };
 		04A570012612823400F2DE97 /* JSONDecoder+Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A570002612823400F2DE97 /* JSONDecoder+Remote.swift */; };
+		04A57004261286F800F2DE97 /* FriendDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A57003261286F800F2DE97 /* FriendDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		04A56FF92612770E00F2DE97 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		04A56FFD26127FA800F2DE97 /* Array+FriendMatching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+FriendMatching.swift"; sourceTree = "<group>"; };
 		04A570002612823400F2DE97 /* JSONDecoder+Remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Remote.swift"; sourceTree = "<group>"; };
+		04A57003261286F800F2DE97 /* FriendDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		04A56FE92612733600F2DE97 /* Model Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				04A57003261286F800F2DE97 /* FriendDataSource.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				04A56FCF261272D200F2DE97 /* AppDelegate.swift in Sources */,
 				04A56FF32612763200F2DE97 /* Connection.swift in Sources */,
 				04A56FFE26127FA800F2DE97 /* Array+FriendMatching.swift in Sources */,
+				04A57004261286F800F2DE97 /* FriendDataSource.swift in Sources */,
 				04A56FD1261272D200F2DE97 /* SceneDelegate.swift in Sources */,
 				04A56FFA2612770E00F2DE97 /* TableViewController.swift in Sources */,
 				04A56FED2612748B00F2DE97 /* Friend.swift in Sources */,
