@@ -15,6 +15,7 @@
 		04A56FDB261272D300F2DE97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A56FD9261272D300F2DE97 /* LaunchScreen.storyboard */; };
 		04A56FED2612748B00F2DE97 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A56FEC2612748B00F2DE97 /* Friend.swift */; };
 		04A56FF02612752700F2DE97 /* friendface.json in Resources */ = {isa = PBXBuildFile; fileRef = 04A56FEF2612752700F2DE97 /* friendface.json */; };
+		04A56FF32612763200F2DE97 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A56FF22612763200F2DE97 /* Connection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		04A56FDC261272D300F2DE97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04A56FEC2612748B00F2DE97 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		04A56FEF2612752700F2DE97 /* friendface.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = friendface.json; sourceTree = "<group>"; };
+		04A56FF22612763200F2DE97 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				04A56FEC2612748B00F2DE97 /* Friend.swift */,
+				04A56FF22612763200F2DE97 /* Connection.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			files = (
 				04A56FD3261272D200F2DE97 /* ViewController.swift in Sources */,
 				04A56FCF261272D200F2DE97 /* AppDelegate.swift in Sources */,
+				04A56FF32612763200F2DE97 /* Connection.swift in Sources */,
 				04A56FD1261272D200F2DE97 /* SceneDelegate.swift in Sources */,
 				04A56FED2612748B00F2DE97 /* Friend.swift in Sources */,
 			);
