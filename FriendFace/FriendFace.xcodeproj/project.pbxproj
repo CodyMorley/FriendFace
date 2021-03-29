@@ -16,6 +16,7 @@
 		04A56FF02612752700F2DE97 /* friendface.json in Resources */ = {isa = PBXBuildFile; fileRef = 04A56FEF2612752700F2DE97 /* friendface.json */; };
 		04A56FF32612763200F2DE97 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A56FF22612763200F2DE97 /* Connection.swift */; };
 		04A56FFA2612770E00F2DE97 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A56FF92612770E00F2DE97 /* TableViewController.swift */; };
+		04A56FFE26127FA800F2DE97 /* Array+FriendMatching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A56FFD26127FA800F2DE97 /* Array+FriendMatching.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		04A56FEF2612752700F2DE97 /* friendface.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = friendface.json; sourceTree = "<group>"; };
 		04A56FF22612763200F2DE97 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		04A56FF92612770E00F2DE97 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		04A56FFD26127FA800F2DE97 /* Array+FriendMatching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+FriendMatching.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				04A56FE52612730800F2DE97 /* Models */,
 				04A56FE62612731000F2DE97 /* Views */,
 				04A56FE72612731600F2DE97 /* Controllers */,
+				04A56FFC26127F5900F2DE97 /* Helpers and Extensions */,
 				04A56FE3261272E200F2DE97 /* Application */,
 				04A56FE4261272F200F2DE97 /* Resources */,
 			);
@@ -140,6 +143,14 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		04A56FFC26127F5900F2DE97 /* Helpers and Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04A56FFD26127FA800F2DE97 /* Array+FriendMatching.swift */,
+			);
+			path = "Helpers and Extensions";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -213,6 +224,7 @@
 			files = (
 				04A56FCF261272D200F2DE97 /* AppDelegate.swift in Sources */,
 				04A56FF32612763200F2DE97 /* Connection.swift in Sources */,
+				04A56FFE26127FA800F2DE97 /* Array+FriendMatching.swift in Sources */,
 				04A56FD1261272D200F2DE97 /* SceneDelegate.swift in Sources */,
 				04A56FFA2612770E00F2DE97 /* TableViewController.swift in Sources */,
 				04A56FED2612748B00F2DE97 /* Friend.swift in Sources */,

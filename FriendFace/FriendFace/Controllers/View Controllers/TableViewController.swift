@@ -62,26 +62,7 @@ class TableViewController: UITableViewController, UISearchResultsUpdating {
     
     // MARK: - Search Results Updater
     func updateSearchResults(for searchController: UISearchController) {
-        if let text = searchController.searchBar.text, text.count > 0 {
-            filteredFriends = friends.filter {
-                $0.name.contains(text)
-                || $0.company.contains(text)
-                || $0.address.contains(text)
-            }
-        } else {
-            filteredFriends = friends
-        }
+        filteredFriends = friends.matching(searchController.searchBar.text)
         tableView.reloadData()
     }
-
-    
-    // MARK: - Navigation
-    /*
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
