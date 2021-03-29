@@ -15,13 +15,7 @@ class TableViewController: UITableViewController, UISearchResultsUpdating {
     // MARK: - Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        dataSource.dataChanged = { [weak self] in
-            self?.tableView.reloadData()
-        }
-        dataSource.fetchFriends()
-        tableView.dataSource = dataSource
-        
+        setupDataSource()
         searchSetup()
     }
     
@@ -39,5 +33,13 @@ class TableViewController: UITableViewController, UISearchResultsUpdating {
         search.searchBar.placeholder = "Find A Friend"
         search.searchResultsUpdater = self
         navigationItem.searchController = search
+    }
+    
+    private func setupDataSource() {
+        dataSource.dataChanged = { [weak self] in
+            self?.tableView.reloadData()
+        }
+        dataSource.fetchFriends()
+        tableView.dataSource = dataSource
     }
 }
